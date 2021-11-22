@@ -50,17 +50,18 @@ export default function App() {
           <View style={styles.scoresContainer}>
             <View style={styles.scoresBlock}>
               <FontAwesome name="star" size={24} color="gold" />
-              <Text style={styles.scoresText}>8.6/10</Text>
-              <Text style={styles.scoresText}>1.1M</Text>
+              <Text style={styles.scoresTextBoldNum}>8.6<Text style={styles.scoresTextReg}>/10</Text></Text>
+              <Text style={styles.scoresTextReg}>1.1M</Text>
             </View>
             <View style={styles.scoresBlock}>
               <FontAwesome name="star-o" size={24} color="white" />
-              <Text style={styles.scoresText}>RATE THIS</Text>
+              <Text style={styles.scoresTextBold}>RATE THIS</Text>
             </View>
             <View style={styles.scoresBlock}>
-              <FontAwesome name="square" size={24} color="#62C74F" />
-              <Text style={styles.scoresText}>Metascore</Text>
-              <Text style={styles.scoresText}>46 critic reviews</Text>
+              {/* <FontAwesome name="square" size={24} color= /> */}
+              <Text style={styles.metaText}>74</Text>
+              <Text style={styles.scoresTextBold}>Metascore</Text>
+              <Text style={styles.scoresTextReg}>46 critic reviews</Text>
             </View>
           </View>
         </View>
@@ -153,7 +154,6 @@ export default function App() {
             </View>
 
             <View style={styles.writerBlock}>
-              
               <Text style={styles.writerTxtHeader}>Writers</Text>
               <Text style={styles.writerTxtContent}>
                 Jonathan Nolan (written by) and Christopher Nolan (written by)
@@ -232,6 +232,7 @@ const styles = StyleSheet.create({
   },
   filmDescText: {
     color: "#fff",
+    fontWeight: "700",
 
     flexWrap: "wrap",
   },
@@ -242,6 +243,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "#fff",
+    fontWeight: "700",
     textAlign: "center",
     paddingTop: 8,
     paddingBottom: 8,
@@ -258,8 +260,27 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flex: 1,
   },
-  scoresText: {
+  scoresTextBold: {
     color: "#fff",
+    fontWeight: "700",
+  },
+scoresTextBoldNum:{
+  color: "#fff",
+  fontWeight: "700",
+  fontSize: 16
+},
+
+  scoresTextReg: {
+    color: "#fff",
+    fontSize: 12,
+  },
+
+  metaText: {
+    backgroundColor: "#62C74F",
+    color: "#fff",
+    fontWeight: "700",
+    padding: 3,
+    borderRadius: 2,
   },
 
   filmInfoContainer2: {
@@ -309,6 +330,7 @@ const styles = StyleSheet.create({
 
   castName: {
     color: "#fff",
+    fontWeight: "700",
     width: 100,
   },
   castChar: {
@@ -321,9 +343,9 @@ const styles = StyleSheet.create({
     marginLeft: 15,
     marginRight: 15,
   },
- writerBlock:{
-   marginBottom: 15
- },
+  writerBlock: {
+    marginBottom: 15,
+  },
   writerTxtHeader: {
     color: "#fff",
     fontWeight: "700",
