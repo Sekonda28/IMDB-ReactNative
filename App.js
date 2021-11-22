@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import {
   Image,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -14,7 +15,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Image source={require("./assets/imbd-logo.png")} style={styles.logo} />
+        <Image source={require("./assets/imdb-logo.jpeg")} style={styles.logo} />
       </View>
       <View style={styles.filmInfoContainer}>
         <Text style={styles.headerText}>Interstellar</Text>
@@ -68,6 +69,7 @@ export default function App() {
           </TouchableOpacity>
         </View>
         <View style={styles.castProfileContainer}>
+        <ScrollView horizontal={true} >
           <View style={styles.castBlock}>
             <Image
               source={require("./assets/MMprofile.jpg")}
@@ -79,31 +81,31 @@ export default function App() {
             <Image
               source={require("./assets/AHprofile.jpg")}
               style={styles.castImage}
-            /><Text style = {styles.castName}>Anne Hathaway</Text>
-            <Text style = {styles.castChar}>Brand</Text>
+            /><Text numberOfLines={1} style = {styles.castName}>Anne Hathaway</Text>
+            <Text numberOfLines={1} style = {styles.castChar}>Brand</Text>
           </View>
           <View style={styles.castBlock}>
             <Image
               source={require("./assets/JCprofile.jpg")}
               style={styles.castImage}
             />
-            <Text style = {styles.castName}>Jessica Chastain</Text>
-            <Text style = {styles.castChar}>Murph</Text>
+            <Text numberOfLines={1} style = {styles.castName}>Jessica Chastain</Text>
+            <Text numberOfLines={1} style = {styles.castChar}>Murph</Text>
           </View>
           <View style={styles.castBlock}>
             <Image
               source={require("./assets/MFprofile.jpg")}
               style={styles.castImage}
-            /><Text style = {styles.castName}>Mackenzie Foy</Text>
-            <Text style = {styles.castChar}>Murph (10 Yrs)</Text>
+            /><Text numberOfLines={1} style = {styles.castName}>Mackenzie Foy</Text>
+            <Text numberOfLines={1} style = {styles.castChar}>Murph (10 Yrs)</Text>
           </View>
           <View style={styles.castBlock}>
             <Image
               source={require("./assets/EBprofile.jpg")}
               style={styles.castImage}
-            /><Text style = {styles.castName}>Ellen Burstyn</Text>
-            <Text style = {styles.castChar}>Murph (Older)</Text>
-          </View>
+            /><Text numberOfLines={1} style = {styles.castName}>Ellen Burstyn</Text>
+            <Text numberOfLines={1} style = {styles.castChar}>Murph (Older)</Text>
+          </View></ScrollView>
         </View>
       </View>
     </View>
