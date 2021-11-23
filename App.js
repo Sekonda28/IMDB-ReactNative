@@ -13,155 +13,152 @@ import { FontAwesome } from "@expo/vector-icons";
 
 export default function App() {
   return (
-    <View>
+    <View style={styles.container}>
       <ScrollView>
-        <StatusBar style="light" backgroundColor="#191919" />
-        <View style={styles.container}>
-          <View style={styles.header}>
-            <Image
-              source={require("./assets/imdb-logo.jpeg")}
-              style={styles.logo}
-            />
+        <View style={styles.header}>
+          <Image
+            source={require("./assets/imdb-logo.jpeg")}
+            style={styles.logo}
+          />
+        </View>
+        <View style={styles.filmInfoContainer}>
+          <Text style={styles.headerText}>Interstellar</Text>
+          <View style={styles.filmInfo}>
+            <Text style={styles.filmInfoText}>2014</Text>
+            <Text style={styles.filmInfoText}>PG-13</Text>
+            <Text style={styles.filmInfoText}>2h 49min</Text>
+            <Text style={styles.filmInfoText}>Adventure, Drama, Sci-Fi</Text>
           </View>
-          <View style={styles.filmInfoContainer}>
-            <Text style={styles.headerText}>Interstellar</Text>
-            <View style={styles.filmInfo}>
-              <Text style={styles.filmInfoText}>2014</Text>
-              <Text style={styles.filmInfoText}>PG-13</Text>
-              <Text style={styles.filmInfoText}>2h 49min</Text>
-              <Text style={styles.filmInfoText}>Adventure, Drama, Sci-Fi</Text>
+          <View style={styles.filmDescContainer}>
+            <View>
+              <Image
+                source={require("./assets/Interstellar.jpg")}
+                style={styles.picture}
+              />
             </View>
-            <View style={styles.filmDescContainer}>
-              <View>
-                <Image
-                  source={require("./assets/Interstellar.jpg")}
-                  style={styles.picture}
-                />
-              </View>
-              <View style={styles.filmDescRight}>
-                <Text style={styles.filmDescText}>
-                  A team of explorers travel through a wormhole in space in an
-                  attempt to ensure humanity's survival.
-                </Text>
-                <TouchableOpacity style={styles.buttonDesign}>
-                  <Text style={styles.buttonText}>+ ADD TO WATCHLIST</Text>
-                </TouchableOpacity>
-              </View>
-            </View>
-            <View style={styles.scoresContainer}>
-              <View style={styles.scoresBlock}>
-                <FontAwesome name="star" size={24} color="gold" />
-                <Text style={styles.scoresTextBoldNum}>
-                  8.6<Text style={styles.scoresTextReg}>/10</Text>
-                </Text>
-                <Text style={styles.scoresTextReg}>1.1M</Text>
-              </View>
-              <View style={styles.scoresBlock}>
-                <FontAwesome name="star-o" size={24} color="white" />
-                <Text style={styles.scoresTextBold}>RATE THIS</Text>
-              </View>
-              <View style={styles.scoresBlock}>
-                {/* <FontAwesome name="square" size={24} color= /> */}
-                <Text style={styles.metaText}>74</Text>
-                <Text style={styles.scoresTextBold}>Metascore</Text>
-                <Text style={styles.scoresTextReg}>46 critic reviews</Text>
-              </View>
-            </View>
-          </View>
-
-          <View style={styles.filmInfoContainer2}>
-            <View style={styles.castHeader}>
-              <Text style={styles.castHeaderTitle}>Top Billed Cast</Text>
-              <TouchableOpacity>
-                <Text style={styles.castHeaderLink}>SEE ALL</Text>
+            <View style={styles.filmDescRight}>
+              <Text style={styles.filmDescText}>
+                A team of explorers travel through a wormhole in space in an
+                attempt to ensure humanity's survival.
+              </Text>
+              <TouchableOpacity style={styles.buttonDesign}>
+                <Text style={styles.buttonText}>+ ADD TO WATCHLIST</Text>
               </TouchableOpacity>
             </View>
-            <View style={styles.castProfileContainer}>
-              <ScrollView horizontal={true}>
-                <View style={styles.castBlock}>
-                  <Image
-                    source={require("./assets/MMprofile.jpg")}
-                    style={styles.castImage}
-                  />
-                  <View style={styles.castBlockTxt}>
-                    <Text numberOfLines={1} style={styles.castName}>
-                      Matthew McConaughey
-                    </Text>
-                    <Text numberOfLines={1} style={styles.castChar}>
-                      Cooper
-                    </Text>
-                  </View>
-                </View>
-                <View style={styles.castBlock}>
-                  <Image
-                    source={require("./assets/AHprofile.jpg")}
-                    style={styles.castImage}
-                  />
-                  <View style={styles.castBlockTxt}>
-                    <Text numberOfLines={1} style={styles.castName}>
-                      Anne Hathaway
-                    </Text>
-                    <Text numberOfLines={1} style={styles.castChar}>
-                      Brand
-                    </Text>
-                  </View>
-                </View>
-                <View style={styles.castBlock}>
-                  <Image
-                    source={require("./assets/JCprofile.jpg")}
-                    style={styles.castImage}
-                  />
-                  <View style={styles.castBlockTxt}>
-                    <Text numberOfLines={1} style={styles.castName}>
-                      Jessica Chastain
-                    </Text>
-                    <Text numberOfLines={1} style={styles.castChar}>
-                      Murph
-                    </Text>
-                  </View>
-                </View>
-                <View style={styles.castBlock}>
-                  <Image
-                    source={require("./assets/MFprofile.jpg")}
-                    style={styles.castImage}
-                  />
-                  <View style={styles.castBlockTxt}>
-                    <Text numberOfLines={1} style={styles.castName}>
-                      Mackenzie Foy
-                    </Text>
-                    <Text numberOfLines={1} style={styles.castChar}>
-                      Murph (10 Yrs)
-                    </Text>
-                  </View>
-                </View>
-                <View style={styles.castBlock}>
-                  <Image
-                    source={require("./assets/EBprofile.jpg")}
-                    style={styles.castImage}
-                  />
-                  <View style={styles.castBlockTxt}>
-                    <Text numberOfLines={1} style={styles.castName}>
-                      Ellen Burstyn
-                    </Text>
-                    <Text numberOfLines={1} style={styles.castChar}>
-                      Murph (Older)
-                    </Text>
-                  </View>
-                </View>
-              </ScrollView>
+          </View>
+          <View style={styles.scoresContainer}>
+            <View style={styles.scoresBlock}>
+              <FontAwesome name="star" size={24} color="gold" />
+              <Text style={styles.scoresTextBoldNum}>
+                8.6<Text style={styles.scoresTextReg}>/10</Text>
+              </Text>
+              <Text style={styles.scoresTextReg}>1.1M</Text>
             </View>
-            <View style={styles.writerContainer}>
-              <View style={styles.writerBlock}>
-                <Text style={styles.writerTxtHeader}>Director</Text>
-                <Text style={styles.writerTxtContent}>Christopher Nolan</Text>
-              </View>
+            <View style={styles.scoresBlock}>
+              <FontAwesome name="star-o" size={24} color="white" />
+              <Text style={styles.scoresTextBold}>RATE THIS</Text>
+            </View>
+            <View style={styles.scoresBlock}>
+              {/* <FontAwesome name="square" size={24} color= /> */}
+              <Text style={styles.metaText}>74</Text>
+              <Text style={styles.scoresTextBold}>Metascore</Text>
+              <Text style={styles.scoresTextReg}>46 critic reviews</Text>
+            </View>
+          </View>
+        </View>
 
-              <View style={styles.writerBlock}>
-                <Text style={styles.writerTxtHeader}>Writers</Text>
-                <Text style={styles.writerTxtContent}>
-                  Jonathan Nolan (written by) and Christopher Nolan (written by)
-                </Text>
+        <View style={styles.filmInfoContainer2}>
+          <View style={styles.castHeader}>
+            <Text style={styles.castHeaderTitle}>Top Billed Cast</Text>
+            <TouchableOpacity>
+              <Text style={styles.castHeaderLink}>SEE ALL</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.castProfileContainer}>
+            <ScrollView horizontal={true}>
+              <View style={styles.castBlock}>
+                <Image
+                  source={require("./assets/MMprofile.jpg")}
+                  style={styles.castImage}
+                />
+                <View style={styles.castBlockTxt}>
+                  <Text numberOfLines={1} style={styles.castName}>
+                    Matthew McConaughey
+                  </Text>
+                  <Text numberOfLines={1} style={styles.castChar}>
+                    Cooper
+                  </Text>
+                </View>
               </View>
+              <View style={styles.castBlock}>
+                <Image
+                  source={require("./assets/AHprofile.jpg")}
+                  style={styles.castImage}
+                />
+                <View style={styles.castBlockTxt}>
+                  <Text numberOfLines={1} style={styles.castName}>
+                    Anne Hathaway
+                  </Text>
+                  <Text numberOfLines={1} style={styles.castChar}>
+                    Brand
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.castBlock}>
+                <Image
+                  source={require("./assets/JCprofile.jpg")}
+                  style={styles.castImage}
+                />
+                <View style={styles.castBlockTxt}>
+                  <Text numberOfLines={1} style={styles.castName}>
+                    Jessica Chastain
+                  </Text>
+                  <Text numberOfLines={1} style={styles.castChar}>
+                    Murph
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.castBlock}>
+                <Image
+                  source={require("./assets/MFprofile.jpg")}
+                  style={styles.castImage}
+                />
+                <View style={styles.castBlockTxt}>
+                  <Text numberOfLines={1} style={styles.castName}>
+                    Mackenzie Foy
+                  </Text>
+                  <Text numberOfLines={1} style={styles.castChar}>
+                    Murph (10 Yrs)
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.castBlock}>
+                <Image
+                  source={require("./assets/EBprofile.jpg")}
+                  style={styles.castImage}
+                />
+                <View style={styles.castBlockTxt}>
+                  <Text numberOfLines={1} style={styles.castName}>
+                    Ellen Burstyn
+                  </Text>
+                  <Text numberOfLines={1} style={styles.castChar}>
+                    Murph (Older)
+                  </Text>
+                </View>
+              </View>
+            </ScrollView>
+          </View>
+          <View style={styles.writerContainer}>
+            <View style={styles.writerBlock}>
+              <Text style={styles.writerTxtHeader}>Director</Text>
+              <Text style={styles.writerTxtContent}>Christopher Nolan</Text>
+            </View>
+
+            <View style={styles.writerBlock}>
+              <Text style={styles.writerTxtHeader}>Writers</Text>
+              <Text style={styles.writerTxtContent}>
+                Jonathan Nolan (written by) and Christopher Nolan (written by)
+              </Text>
             </View>
           </View>
         </View>
